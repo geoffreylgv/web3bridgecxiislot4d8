@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Co-working Space Booking System</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+</head>
+<body class="bg-gray-100 text-gray-900 flex flex-col items-center p-4">
+
+  <h1 class="text-3xl font-bold mb-6">Co-working Space Booking System</h1>
+
+<!-- Booking Form -->
+  <div id="booking-form" class="w-full max-w-md bg-white p-6 rounded-lg shadow-md mb-6">
+    <h2 class="text-2xl font-semibold mb-4">Book a Desk</h2>
+
+    <label for="deskType" class="block mb-2">Desk Type:</label>
+    <select id="deskType" class="w-full mb-4 p-2 border border-gray-300 rounded-md">
+      <option value="individual">Individual</option>
+      <option value="team">Team</option>
+    </select>
+
+    <label for="membershipTier" class="block mb-2">Membership Tier:</label>
+    <select id="membershipTier" class="w-full mb-4 p-2 border border-gray-300 rounded-md">
+      <option value="basic">Basic - $10/hour</option>
+      <option value="premium">Premium - $15/hour</option>
+      <option value="executive">Executive - $20/hour</option>
+    </select>
+
+    <label for="duration" class="block mb-2">Duration (hours):</label>
+    <input type="number" id="duration" min="1" max="8" value="1" class="w-full mb-4 p-2 border border-gray-300 rounded-md">
+
+    <button id="bookBtn" class="w-full bg-blue-500 text-white p-2 rounded-md hover:bg-blue-600">Book Desk</button>
+  </div>
+
+  <!-- Summary and Revenue Dashboard -->
+  <div id="summary" class="w-full max-w-md bg-white p-6 rounded-lg shadow-md mb-6">
+    <h2 class="text-2xl font-semibold mb-4">Booking Summary</h2>
+    <p id="summary-text" class="text-gray-700"></p>
+  </div>
+
+  <div id="dashboard" class="w-full max-w-md bg-white p-6 rounded-lg shadow-md">
+    <h2 class="text-2xl font-semibold mb-4">Revenue Dashboard</h2>
+    <p id="dashboard-text" class="text-gray-700"></p>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
